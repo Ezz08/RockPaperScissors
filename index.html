@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game</title>
+    <title>Object</title>
 </head>
 
 <body>
@@ -15,6 +15,18 @@
     <button onclick="playGame('paper')">Paper</button>
 
     <button onclick="playGame('scissors')">Scissors</button>
+
+    <p class="js-result"></p>
+    <p class="js-moves"></p>
+    <p class="js-score"></p>
+
+    <button onclick="
+    score.wins = 0;
+    score.losses = 0;
+    score.ties = 0;
+    localStorage.removeItem('score')
+    updateScore();
+    ">Reset Score</button>
 
     <script src="script.js"></script>
 </body>
